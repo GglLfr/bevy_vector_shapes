@@ -35,17 +35,17 @@ use wgpu::{util::BufferInitDescriptor, BufferUsages, VertexAttribute};
 
 use crate::prelude::*;
 
-pub(crate) mod pipeline;
-use pipeline::*;
+mod pipeline;
+pub use pipeline::*;
 
-pub(crate) mod commands;
-use commands::*;
+mod commands;
+pub use commands::*;
 
-pub(crate) mod render_2d;
-use render_2d::*;
+mod render_2d;
+pub use render_2d::*;
 
-pub(crate) mod render_3d;
-use render_3d::*;
+mod render_3d;
+pub use render_3d::*;
 
 /// Handler to shader containing shared functionality.
 pub const CORE_HANDLE: Handle<Shader> = weak_handle!("00000000-0000-0000-b766-25c7b7116e7a");
